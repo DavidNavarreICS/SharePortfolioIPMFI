@@ -13,7 +13,7 @@ public abstract class Action {
     private String nom;
 
     /**
-     * Get the value of nom
+     * Get the value of nom usgdfiu.
      *
      * @return the value of nom
      */
@@ -30,16 +30,19 @@ public abstract class Action {
     @Override
     public boolean equals(Object obj) {
         Action actionAComparer;
-        
-        actionAComparer = (Action)obj;
-       return (this.getNom().compareToIgnoreCase(actionAComparer.getNom()) == 0);
+
+        actionAComparer = (Action) obj;
+        return (this.getNom().
+                compareToIgnoreCase(actionAComparer.getNom()) == 0);
     }
 
     @Override
     public int hashCode() {
-        return this.getNom().toUpperCase().hashCode();
+        return this.getNom().
+                toUpperCase().
+                hashCode();
     }
-    
+
     @Override
     public String toString() {
         return this.getNom();
