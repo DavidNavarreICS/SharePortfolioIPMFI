@@ -33,17 +33,16 @@ public class ActionCompliquee extends Action {
 
     @Override
     public float valeur(Jour j) {
-        float total;
+        double total;
 
         total = 0;
 
         // parcours des clefs
         for (ActionSimple act : this.tblComposition.keySet()) {
-            total = total
-                    + (act.valeur(j) * this.tblComposition.get(act).
+            total += (act.valeur(j) * (double) this.tblComposition.get(act).
                     getPourcentage());
         }
-        return total;
+        return (float) total;
     }
 
     public void enrgProportion(ActionSimple as, float pourcentage) {

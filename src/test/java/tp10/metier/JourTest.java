@@ -15,6 +15,8 @@
  */
 package tp10.metier;
 
+import org.junit.jupiter.api.Assertions;
+
 /**
  *
  * @author David Navarre <David.Navarre@irit.fr>
@@ -25,7 +27,13 @@ public class JourTest {
     }
 
     @org.junit.jupiter.api.Test
-    public void testSomeMethod() {
+    public void testConstructor() {
+        Integer numJour = 3;
+        Jour j1 = new Jour(numJour);
+
+        Integer result = j1.getNoJour();
+        Assertions.assertEquals(numJour, result,
+                "L'entier utilisé pour créer un Jour doit être le même que celui récupéré par la méthode getNoJour");
     }
 
 }

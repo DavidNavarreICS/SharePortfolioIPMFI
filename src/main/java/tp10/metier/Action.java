@@ -16,11 +16,15 @@
 package tp10.metier;
 
 /**
+ * This abstract class is the base for any kind of share.
  *
- * @author perussel
+ * @author David Navarre &lt;David.Navarre@irit.fr&gt;
  */
 public abstract class Action {
 
+    /**
+     * Attributes that represents the name of the share.
+     */
     private String nom;
 
     /**
@@ -32,10 +36,21 @@ public abstract class Action {
         return nom;
     }
 
+    /**
+     *
+     * @param nom
+     */
     public Action(String nom) {
         this.nom = nom;
     }
 
+    /**
+     * This method provides the value of the share for a given day.
+     *
+     * @param j the given day
+     *
+     * @return the value of the share for the given day
+     */
     public abstract float valeur(Jour j);
 
     @Override
