@@ -13,27 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package tp10.metier;
-
-import org.junit.jupiter.api.Assertions;
-
 /**
- *
- * @author David Navarre <David.Navarre@irit.fr>
+ * This package contains ...
  */
-public class JourTest {
-
-    public JourTest() {
-    }
-
-    @org.junit.jupiter.api.Test
-    public void testConstructor() {
-        Integer numJour = 3;
-        Jour j1 = new Jour(numJour);
-
-        Integer result = j1.getNoJour();
-        Assertions.assertEquals(numJour, result,
-                "L'entier utilisé pour créer un Jour doit être le même que celui récupéré par la méthode getNoJour");
-    }
-
-}
+package fr.ut1.miage.actions;

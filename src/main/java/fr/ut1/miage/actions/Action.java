@@ -13,7 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package tp10.metier;
+package fr.ut1.miage.actions;
+
+import java.util.Objects;
 
 /**
  * This abstract class is the base for any kind of share.
@@ -25,10 +27,10 @@ public abstract class Action {
     /**
      * Attributes that represents the name of the share.
      */
-    private String nom;
+    private final String nom;
 
     /**
-     * Get the value of nom usgdfiu.
+     * Get the value of nom.
      *
      * @return the value of nom
      */
@@ -37,10 +39,11 @@ public abstract class Action {
     }
 
     /**
+     * Builds an action identified by a value called <code>nom</code>.
      *
-     * @param nom
+     * @param nom the identifier of the action
      */
-    public Action(String nom) {
+    public Action(final String nom) {
         this.nom = nom;
     }
 
@@ -54,12 +57,18 @@ public abstract class Action {
     public abstract float valeur(Jour j);
 
     @Override
-    public boolean equals(Object obj) {
-        Action actionAComparer;
-
-        actionAComparer = (Action) obj;
-        return (this.getNom().
-                compareToIgnoreCase(actionAComparer.getNom()) == 0);
+    public boolean equals(final Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Action other = (Action) obj;
+        return Objects.equals(this.nom, other.nom);
     }
 
     @Override
