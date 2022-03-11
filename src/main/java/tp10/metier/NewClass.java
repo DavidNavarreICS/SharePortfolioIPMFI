@@ -22,13 +22,6 @@ package tp10.metier;
  *
  * @author David Navarre <David.Navarre@irit.fr>
  */
-public class JourTest {
-
-    public JourTest() {
-    }
-
-    @org.junit.jupiter.api.Test
-    public void testSomeMethod() {
-    }
+public class NewClass {
 
 }
